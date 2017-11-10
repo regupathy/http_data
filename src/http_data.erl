@@ -23,6 +23,7 @@ new_request() -> #http_data{for = request,content_type = #content_type.raw}.
 
 new_response() -> #http_data{for = response,content_type = #content_type.raw}.
 
+
 post(#http_data{} = H) -> H#http_data{request = #method.post}.
 
 post(Action,Headers) -> #http_data{request = #method.post,for = request,action = Action,headers = Headers,content_type = #content_type.raw}.
